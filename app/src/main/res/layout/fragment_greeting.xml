@@ -10,9 +10,10 @@
         android:id="@+id/title_greeting_frag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/lilita_one"
         android:text="WombWise"
-        android:textColor="@color/black"
-        android:textSize="34sp"
+        android:textColor="#E6857E"
+        android:textSize="42sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,15 +37,17 @@
         android:id="@+id/btn_login_greeting"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="#FF948C"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/wombWiseBlue"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:text="Login"
-        android:textColor="#F6F0E4"
-        android:textSize="30sp"
+        android:textColor="@color/wombWiseBeige"
+        android:textSize="20sp"
         app:cornerRadius="@null"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline7"
@@ -55,11 +58,26 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="225dp"
-        android:layout_height="200dp"
+        android:layout_width="289dp"
+        android:layout_height="255dp"
         android:src="@drawable/womb_wise_logo_final"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline7" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Your trusty companion in the journey to motherhood"
+        android:textAlignment="center"
+        android:textColor="#676767"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_login_greeting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

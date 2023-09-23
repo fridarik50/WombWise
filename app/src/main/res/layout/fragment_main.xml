@@ -15,15 +15,16 @@
 
     <TextView
         android:id="@+id/title_main_frag"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="WombWise"
+        android:layout_width="300dp"
+        android:layout_height="75dp"
+        android:text="What do you want to check today?"
         android:textColor="#FF948C"
-        android:textSize="34sp"
+        android:textSize="28sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline11"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.31"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline12"
@@ -61,7 +62,7 @@
         android:layout_height="105dp"
         android:backgroundTint="@color/wombWiseBeige"
         app:cornerRadius="20dp"
-        app:icon="@drawable/icons8_pear"
+        app:icon="@drawable/icons8_pear_50"
         app:iconGravity="top"
         app:iconPadding="0dp"
         app:iconSize="50dp"
@@ -82,32 +83,17 @@
         app:iconPadding="0dp"
         app:iconSize="50dp"
         app:iconTint="@color/wombWiseBlue"
-        app:layout_constraintBottom_toTopOf="@+id/btn_calender"
+        app:layout_constraintBottom_toTopOf="@+id/btn_calc_due_date"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/guideline12"
         app:layout_constraintTop_toTopOf="@+id/guideline11" />
-
-    <Button
-        android:id="@+id/btn_calender"
-        android:layout_width="120dp"
-        android:layout_height="105dp"
-        android:backgroundTint="@color/wombWiseBeige"
-        app:cornerRadius="20dp"
-        app:icon="@drawable/icons8_calendar"
-        app:iconGravity="top"
-        app:iconPadding="0dp"
-        app:iconSize="50dp"
-        app:iconTint="@color/wombWiseBlue"
-        app:layout_constraintBottom_toTopOf="@+id/guideline13"
-        app:layout_constraintEnd_toEndOf="@+id/btn_weekly_track"
-        app:layout_constraintStart_toStartOf="@+id/btn_weekly_track"
-        app:layout_constraintTop_toBottomOf="@+id/btn_weekly_track" />
 
     <TextView
         android:id="@+id/btn_text_personal_data"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="16dp"
         android:text="Personal Data"
         android:textColor="@color/wombWiseBlue"
         android:textSize="13sp"
@@ -120,20 +106,21 @@
         android:id="@+id/btn_text_weekly_track"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="16dp"
         android:text="Weekly Track"
         android:textColor="@color/wombWiseBlue"
         android:textSize="13sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/btn_weekly_track"
         app:layout_constraintEnd_toEndOf="@+id/btn_weekly_track"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="@+id/btn_weekly_track" />
 
     <TextView
         android:id="@+id/btn_text_size"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="16dp"
         android:text="Baby Size"
         android:textColor="@color/wombWiseBlue"
         android:textSize="13sp"
@@ -142,24 +129,10 @@
         app:layout_constraintEnd_toEndOf="@+id/btn_size_comparison"
         app:layout_constraintStart_toStartOf="@+id/btn_size_comparison" />
 
-    <TextView
-        android:id="@+id/btn_text_timeline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Timeline"
-        android:textColor="@color/wombWiseBlue"
-        android:textSize="13sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_calender"
-        app:layout_constraintEnd_toEndOf="@+id/btn_calender"
-        app:layout_constraintStart_toStartOf="@+id/btn_calender" />
-
     <Button
         android:id="@+id/btn_calc_due_date"
         android:layout_width="120dp"
         android:layout_height="105dp"
-        android:layout_marginBottom="64dp"
         android:backgroundTint="@color/wombWiseBeige"
         app:cornerRadius="20dp"
         app:icon="@drawable/icons8_calculator"
@@ -167,16 +140,16 @@
         app:iconPadding="0dp"
         app:iconSize="50dp"
         app:iconTint="@color/wombWiseBlue"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline13" />
+        app:layout_constraintBottom_toTopOf="@+id/guideline13"
+        app:layout_constraintEnd_toEndOf="@+id/btn_weekly_track"
+        app:layout_constraintStart_toStartOf="@+id/btn_weekly_track"
+        app:layout_constraintTop_toBottomOf="@+id/btn_weekly_track" />
 
     <TextView
         android:id="@+id/text_calc_due_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="16dp"
         android:text="Calculate Due Date"
         android:textColor="@color/wombWiseBlue"
         android:textSize="13sp"
