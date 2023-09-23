@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="fragments.DueDateCalcFragment">
+
+    <EditText
+        android:id="@+id/edt_last_menstrual_period"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:autofillHints="date"
+        android:editable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="@string/text_enter_last_menstrual_period_yyyy_mm_dd"
+        android:importantForAccessibility="yes"
+        android:inputType="date"
+        app:layout_constraintBottom_toTopOf="@+id/btn_calculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_calculate"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/wombWisePink"
+        android:contentDescription="@string/desc_calculate_button"
+        android:importantForAccessibility="yes"
+        android:text="@string/text_calculate"
+        android:textColor="@color/wombWiseBeige"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_last_menstrual_period" />
+
+    <TextView
+        android:id="@+id/title_due_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:contentDescription="@string/desc_due_date_output"
+        android:importantForAccessibility="no"
+        android:text="@string/text_due_date"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_calculate" />
+
+    <TextView
+        android:id="@+id/title_gestational_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:contentDescription="@string/desc_gestational_age_output"
+        android:importantForAccessibility="no"
+        android:text="@string/text_gestational_age"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_due_date" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
