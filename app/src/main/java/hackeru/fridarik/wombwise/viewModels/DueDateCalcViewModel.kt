@@ -45,14 +45,13 @@ class DueDateCalcViewModel : ViewModel() {
 
     private fun calculateGestationalAge(lastMenstrualPeriodString: String): String {
         try {
+            val dateFormat = SimpleDateFormat("yyyy-MM-dd") // Adjust the date format as needed
             val lastMenstrualPeriod = dateFormat.parse(lastMenstrualPeriodString)
             val currentDate = Calendar.getInstance().time
 
-            val daysDifference = ((currentDate.time - lastMenstrualPeriod.time) / (1000 * 60 * 60 * 24)).toDouble()
-            val gestationalAge = (daysDifference * (4.0 + 1.0 / 3.0)).toInt()
-
-            val weeks = gestationalAge / 7
-            val days = gestationalAge % 7
+            val daysDifference = ((currentDate.time - lastMenstrualPeriod.time) / (1000 * 60 * 60 * 24)).toInt()
+            val weeks = daysDifference / 7
+            val days = daysDifference % 7
 
             return "$weeks weeks $days days"
         } catch (e: Exception) {
