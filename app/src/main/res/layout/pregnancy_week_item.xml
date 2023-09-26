@@ -14,44 +14,115 @@
 
         <ImageView
             android:id="@+id/img_weekly_fruit"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="210dp"
+            android:layout_height="165dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline15"
             app:layout_constraintWidth_percent="0.5"
             app:srcCompat="@drawable/fetus_logo" />
 
         <TextView
-            android:id="@+id/text_week_num"
+            android:id="@+id/text_month_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="Week Number:"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/text_month_num"
+            android:layout_marginBottom="4dp"
+            android:text="Month"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/text_month_value"
+            app:layout_constraintEnd_toStartOf="@+id/guideline18"
+            app:layout_constraintStart_toStartOf="@+id/guideline17"
+            app:layout_constraintTop_toTopOf="@+id/text_week_title"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <TextView
+            android:id="@+id/text_trimester_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Value"
+            android:textAlignment="viewStart"
+            android:textColor="@color/wombWiseBlue"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/text_month_value"
+            app:layout_constraintEnd_toEndOf="@+id/text_trimester_title"
+            app:layout_constraintStart_toStartOf="@+id/text_trimester_title"
+            app:layout_constraintTop_toBottomOf="@+id/text_trimester_title" />
+
+        <TextView
+            android:id="@+id/text_trimester_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Trimester"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/text_trimester_value"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline18"
+            app:layout_constraintTop_toTopOf="@+id/text_month_title"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/text_week_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Value"
+            android:textColor="@color/wombWiseBlue"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/guideline15"
+            app:layout_constraintEnd_toEndOf="@+id/text_week_title"
+            app:layout_constraintStart_toStartOf="@+id/text_week_title"
+            app:layout_constraintTop_toBottomOf="@+id/text_week_title" />
+
+        <TextView
+            android:id="@+id/text_week_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Week"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/text_week_value"
+            app:layout_constraintEnd_toStartOf="@+id/guideline17"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
 
         <TextView
-            android:id="@+id/text_month_num"
+            android:id="@+id/text_month_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Month Number:"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/text_trimester_num"
-            app:layout_constraintStart_toStartOf="@+id/text_week_num"
-            app:layout_constraintTop_toBottomOf="@+id/text_week_num" />
+            android:text="Value"
+            android:textColor="@color/wombWiseBlue"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/text_week_value"
+            app:layout_constraintEnd_toEndOf="@+id/text_month_title"
+            app:layout_constraintStart_toStartOf="@+id/text_month_title"
+            app:layout_constraintTop_toBottomOf="@+id/text_month_title" />
 
-        <TextView
-            android:id="@+id/text_trimester_num"
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline17"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Trimester Number:"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/text_week_num"
-            app:layout_constraintTop_toBottomOf="@+id/text_month_num" />
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.33" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.66" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

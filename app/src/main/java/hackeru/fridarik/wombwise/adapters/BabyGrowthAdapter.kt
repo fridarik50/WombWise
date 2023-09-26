@@ -21,7 +21,9 @@ class BabyGrowthAdapter(val babyGrowthDetails: List <BabyGrowthDetails>): Adapte
     override fun onBindViewHolder(holder: BabyGrowthVH, position: Int) {
         val babySize = babyGrowthDetails[position]
 
-        holder.binding.textWeeklyNum.text = "In week number ${babySize.weekNum}:"
+        holder.binding.weekNumValueSizeItem.text = "Week ${babySize.weekNum}"
+        holder.binding.monthNumValueSizeItem.text = "Month ${babySize.weekNum}"
+        holder.binding.trimesterNumValueSizeItem.text = "Trimester ${babySize.weekNum}"
     }
 
     class BabyGrowthVH(val binding: SizeCompareItemBinding)

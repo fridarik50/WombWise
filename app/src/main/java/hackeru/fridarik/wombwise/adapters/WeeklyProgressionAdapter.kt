@@ -27,9 +27,9 @@ class WeeklyProgressionAdapter(val weeklyProgDetails: List<WeeklyPregnancyDetail
     override fun onBindViewHolder(holder: WeeklyProgressionVH, position: Int) {
         val pregnancyWeek = weeklyProgDetails[position]
 
-        holder.binding.textWeekNum.text = "Week Number: ${pregnancyWeek.weekNum}"
-        holder.binding.textMonthNum.text = "Month Number: ${pregnancyWeek.monthNum}"
-        holder.binding.textTrimesterNum.text = "Trimester Number: ${pregnancyWeek.trimesterNum}"
+        holder.binding.textWeekValue.text = "Week ${pregnancyWeek.weekNum}"
+        holder.binding.textMonthValue.text = "Month ${pregnancyWeek.monthNum}"
+        holder.binding.textTrimesterValue.text = "Trimester ${pregnancyWeek.trimesterNum}"
 
         holder.binding.root.setOnClickListener {
             onClick.invoke(pregnancyWeek)

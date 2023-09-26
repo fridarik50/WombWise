@@ -24,16 +24,35 @@
         android:layout_width="match_parent"
         android:layout_height="0dp">
 
+        <TextView
+            android:id="@+id/title_personal_record"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Personal Record"
+            android:textAlignment="textStart"
+            android:textColor="@color/wombWisePink"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_enter_user_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please enter your details"
+            android:textAlignment="textStart"
+            android:textSize="20sp" />
+
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_margin="12dp"
             android:layout_height="wrap_content">
+
             <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:hint="Enter name"
                 android:id="@+id/nameEt"
-                android:layout_height="wrap_content">
-            </com.google.android.material.textfield.TextInputEditText>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name"></com.google.android.material.textfield.TextInputEditText>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -42,30 +61,32 @@
             android:layout_width="match_parent"
             android:layout_margin="12dp"
             android:layout_height="wrap_content">
+
             <com.google.android.material.textfield.TextInputEditText
-                android:inputType="numberDecimal"
-                android:layout_width="match_parent"
-                android:hint="Enter age"
                 android:id="@+id/ageEt"
-                android:layout_height="wrap_content">
-            </com.google.android.material.textfield.TextInputEditText>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="Age"
+                android:inputType="numberDecimal"></com.google.android.material.textfield.TextInputEditText>
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:id="@+id/lastPeriodDatePickerTv"
             android:layout_width="match_parent"
-            android:text="Last Period Date"
-            android:textAlignment="center"
-            android:textSize="24sp"
+            android:layout_height="wrap_content"
             android:paddingVertical="8dp"
-            android:layout_height="wrap_content"/>
+            android:text="Insert last period date"
+            android:textAlignment="textStart"
+            android:textSize="20sp" />
+
         <DatePicker
             android:id="@+id/lastPeriodDatePicker"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:headerBackground="@color/wombWiseBlue" />
+            android:headerBackground="@color/wombWisePink" />
         <TextView
             android:id="@+id/chosenLastPeriodDate"
             android:layout_width="match_parent"
@@ -78,7 +99,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="32dp"
-            android:backgroundTint="@color/wombWisePink"
+            android:backgroundTint="@color/wombWiseBlue"
             android:text="Update"
             android:textColor="@color/wombWiseBeige" />
     </LinearLayout>
