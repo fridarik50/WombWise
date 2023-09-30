@@ -46,6 +46,7 @@ class UserDetailsFragment : Fragment() {
             binding.nameEt.setText(woman.name)
             binding.ageEt.setText(woman.age.toString())
             binding.genderEt.setText(woman.gender)
+            binding.previousPregnanciesEt.setText(woman.numOfPreviousPregnancies.toString())
             val date = LocalDateTime.ofInstant(Instant.ofEpochMilli(woman.lastPeriod), ZoneId.systemDefault())
 
             val monthName = date.month.name
@@ -69,6 +70,7 @@ class UserDetailsFragment : Fragment() {
             val name = binding.nameEt.text.toString()
             val age = binding.ageEt.text.toString()
             val gender = binding.genderEt.text.toString()
+            val previousPregnancies = binding.previousPregnanciesEt.text.toString()
             if(age.isEmpty()) {
                 Snackbar.make(view, "Please enter your age", Snackbar.LENGTH_SHORT).show()
                 return@setOnClickListener
@@ -79,6 +81,7 @@ class UserDetailsFragment : Fragment() {
                 current.name = name
                 current.gender = gender
                 current.lastPeriod = dateTimeInMillis
+                current.numOfPreviousPregnancies = previousPregnancies.toInt()
                 viewModel.updatePregnantWoman(current)
             } else { // new user details
 
@@ -86,7 +89,8 @@ class UserDetailsFragment : Fragment() {
                         name = name,
                         age = age.toInt(),
                         lastPeriod = dateTimeInMillis,
-                        gender = gender)
+                        gender = gender,
+                        numOfPreviousPregnancies = previousPregnancies.toInt())
 
                 viewModel.insertPregnantWoman(woman)
             }

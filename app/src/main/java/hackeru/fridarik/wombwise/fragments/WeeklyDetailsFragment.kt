@@ -36,8 +36,10 @@ class WeeklyDetailsFragment : Fragment() {
 
         super.onViewCreated(view, savedInstanceState)
         val weeklyDetails = Gson().fromJson( requireArguments().getString(EXTRA_WEEKLY_DETAILS),WeeklyPregnancyDetails::class.java)
-        binding.textBabyProg.text = "Baby Progression: ${weeklyDetails.babyProgression}"
-        binding.textMotherProg.text = "Mother Progression: ${weeklyDetails.motherProgression}"
+        binding.titleBabyProg.text = "Baby Progression:"
+        binding.textBabyProg.text = "${weeklyDetails.babyProgression}"
+        binding.titleMotherProg.text = "Mother Progression:"
+        binding.textMotherProg.text = "${weeklyDetails.motherProgression}"
 
 
          Glide.with(this).load(weeklyDetails.weekNumImg).into(binding.imgWeekOfNum)

@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/img_week_of_num"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:src="@drawable/ic_launcher_foreground"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,27 +24,66 @@
         app:layout_constraintGuide_percent="0.25" />
 
     <TextView
+        android:id="@+id/title_baby_prog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Baby Progression:"
+        android:textColor="@color/wombWiseDarkGray"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/text_baby_prog"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+    <TextView
+        android:id="@+id/title_mother_prog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Mother Progression:"
+        android:textColor="@color/wombWiseDarkGray"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/text_mother_prog"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline19" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
         android:id="@+id/text_baby_prog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="Baby Progression:"
+        android:text="Baby prog details"
         android:textColor="@color/wombWisePink"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/text_mother_prog"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_week_of_num" />
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline19"
+        app:layout_constraintStart_toStartOf="@+id/title_baby_prog"
+        app:layout_constraintTop_toBottomOf="@+id/title_baby_prog" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
 
     <TextView
         android:id="@+id/text_mother_prog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="Mother Progression:"
+        android:text="Baby prog details"
         android:textColor="@color/wombWisePink"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/text_baby_prog"
-        app:layout_constraintStart_toStartOf="@+id/text_baby_prog"
-        app:layout_constraintTop_toBottomOf="@+id/text_baby_prog" />
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline20"
+        app:layout_constraintStart_toStartOf="@+id/title_mother_prog"
+        app:layout_constraintTop_toBottomOf="@+id/title_mother_prog" />
 </androidx.constraintlayout.widget.ConstraintLayout>

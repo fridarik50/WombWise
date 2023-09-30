@@ -10,5 +10,6 @@ data class PregnantWoman(
     var name: String,
     var age: Int,
     var gender:String,
-    var lastPeriod: Long
+    var lastPeriod: Long,
+    var numOfPreviousPregnancies: Int
 )

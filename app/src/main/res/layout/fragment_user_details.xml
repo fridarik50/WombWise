@@ -107,6 +107,19 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_margin="12dp"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/previousPregnanciesEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Number of previous pregnancies"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
         <Button
             android:id="@+id/updateDetailsBtn"
             android:layout_width="match_parent"
