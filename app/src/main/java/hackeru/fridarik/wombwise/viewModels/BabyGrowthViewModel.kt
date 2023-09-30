@@ -25,7 +25,10 @@ class BabyGrowthViewModel: ViewModel(){
         val service = PregnancyDetailsService.get()
         viewModelScope.launch {
             try {
+                println("Fetching")
                 val response = service.getBabyDetails()
+                println(response)
+                println("Fetched")
                 _babyGrowthLiveData.postValue(response.babyGrowthDetails)
                 Log.i(TAG, "$response")
             } catch (e: HttpException) {

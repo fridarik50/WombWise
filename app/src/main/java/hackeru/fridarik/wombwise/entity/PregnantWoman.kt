@@ -9,5 +9,6 @@ data class PregnantWoman(
     @PrimaryKey val id: Long = 0,
     var name: String,
     var age: Int,
+    var gender:String,
     var lastPeriod: Long
 )

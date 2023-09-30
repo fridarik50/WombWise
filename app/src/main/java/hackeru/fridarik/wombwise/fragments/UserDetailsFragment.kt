@@ -1,22 +1,23 @@
 package hackeru.fridarik.wombwise.fragments
 
-import android.os.Build
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.annotation.RequiresApi
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.snackbar.Snackbar
 import hackeru.fridarik.wombwise.databinding.FragmentUserDetailsBinding
 import hackeru.fridarik.wombwise.entity.PregnantWoman
 import hackeru.fridarik.wombwise.viewModels.UserDetailsViewModel
 import java.time.Instant
-import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.ZoneId
 
+fun Long.toDateString(): String {
+    val date = LocalDateTime.ofInstant(Instant.ofEpochMilli(this), ZoneId.systemDefault())
+    return "${date.year}-${date.monthValue}-${date.dayOfMonth}"
+}
 
 class UserDetailsFragment : Fragment() {
 
@@ -44,7 +45,7 @@ class UserDetailsFragment : Fragment() {
             if(woman == null)return@observe
             binding.nameEt.setText(woman.name)
             binding.ageEt.setText(woman.age.toString())
-
+            binding.genderEt.setText(woman.gender)
             val date = LocalDateTime.ofInstant(Instant.ofEpochMilli(woman.lastPeriod), ZoneId.systemDefault())
 
             val monthName = date.month.name
@@ -58,7 +59,7 @@ class UserDetailsFragment : Fragment() {
 
             val dateTime = LocalDateTime.of(
                 binding.lastPeriodDatePicker.year,
-                binding.lastPeriodDatePicker.month,
+                binding.lastPeriodDatePicker.month + 1,
                 binding.lastPeriodDatePicker.dayOfMonth,
                 1,
                 1
@@ -67,6 +68,7 @@ class UserDetailsFragment : Fragment() {
                 dateTime.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli()
             val name = binding.nameEt.text.toString()
             val age = binding.ageEt.text.toString()
+            val gender = binding.genderEt.text.toString()
             if(age.isEmpty()) {
                 Snackbar.make(view, "Please enter your age", Snackbar.LENGTH_SHORT).show()
                 return@setOnClickListener
@@ -75,12 +77,17 @@ class UserDetailsFragment : Fragment() {
                 val current = viewModel.pregnantWomanLiveData.value!!
                 current.age = age.toInt()
                 current.name = name
+                current.gender = gender
                 current.lastPeriod = dateTimeInMillis
                 viewModel.updatePregnantWoman(current)
             } else { // new user details
 
-                val woman =
-                    PregnantWoman(name = name, age = age.toInt(), lastPeriod = dateTimeInMillis)
+                val woman = PregnantWoman(
+                        name = name,
+                        age = age.toInt(),
+                        lastPeriod = dateTimeInMillis,
+                        gender = gender)
+
                 viewModel.insertPregnantWoman(woman)
             }
         }

@@ -19,7 +19,7 @@ interface PregnancyDetailsService {
         fun get() : PregnancyDetailsService {
             if(service == null) {
                 service = Retrofit.Builder()
-                    .baseUrl("https://gist.githubusercontent.com/fridarik50/a7f679314b945218ef46a4edfa68472b/raw/c1a7303af59e34aa9e40445100377188de624833/")
+                    .baseUrl("https://gist.githubusercontent.com/fridarik50/a7f679314b945218ef46a4edfa68472b/raw/0015d7c47924805d73498e91b40fece836b5b698/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .build()
                     .create(PregnancyDetailsService::class.java)

@@ -39,9 +39,9 @@ class FruitComparisonFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         babyGrowthViewModel = ViewModelProvider(this) [BabyGrowthViewModel::class.java]
-
         babyGrowthViewModel.babyGrowthLiveData.observe(viewLifecycleOwner) {details ->
             adapter = BabyGrowthAdapter(details)
+            println("babyGrowthLiveData.observe")
             binding.babySizeDetailsRv.adapter = adapter
         }
 

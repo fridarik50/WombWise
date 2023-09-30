@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import hackeru.fridarik.wombwise.databinding.FragmentDueDateCalcBinding
 import hackeru.fridarik.wombwise.viewModels.DueDateCalcViewModel
+import hackeru.fridarik.wombwise.viewModels.UserDetailsViewModel
 
 
 class DueDateCalcFragment : Fragment() {
@@ -19,6 +20,8 @@ class DueDateCalcFragment : Fragment() {
     private val binding get() = _binding!!
 
     lateinit var dueDateCalcViewModel: DueDateCalcViewModel
+    lateinit var detailsViewModel: UserDetailsViewModel
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,11 +35,16 @@ class DueDateCalcFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         dueDateCalcViewModel = ViewModelProvider(this) [DueDateCalcViewModel::class.java]
+        detailsViewModel = ViewModelProvider(this) [UserDetailsViewModel::class.java]
 
+        detailsViewModel.initDB(requireActivity().application)
         dueDateCalcViewModel.dueDate.observe(viewLifecycleOwner) {
             binding.titleDueDate.text = it
         }
-
+        detailsViewModel.pregnantWomanLiveData.observe(viewLifecycleOwner) {
+            if(it !=null)
+                binding.edtLastMenstrualPeriod.setText( it.lastPeriod.toDateString() )
+        }
         dueDateCalcViewModel.gestationalAge.observe(viewLifecycleOwner) {
             binding.titleGestationalAge.text = it
         }
