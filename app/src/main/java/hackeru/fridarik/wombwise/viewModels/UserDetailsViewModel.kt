@@ -4,7 +4,7 @@ import android.app.Application
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import hackeru.fridarik.wombwise.AppDatabase
+import hackeru.fridarik.wombwise.database.AppDatabase
 import hackeru.fridarik.wombwise.entity.PregnantWoman
 import hackeru.fridarik.wombwise.services.PregnantWomanDao
 import kotlinx.coroutines.launch

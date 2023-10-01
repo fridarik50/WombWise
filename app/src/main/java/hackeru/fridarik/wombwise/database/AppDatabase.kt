@@ -1,7 +1,6 @@
-package hackeru.fridarik.wombwise
+package hackeru.fridarik.wombwise.database
 
 import android.app.Application
-import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
