@@ -17,7 +17,7 @@
         android:id="@+id/title_main_frag"
         android:layout_width="300dp"
         android:layout_height="75dp"
-        android:text="What do you want to check today?"
+        android:text="@string/text_main_frag_title"
         android:textColor="#FF948C"
         android:textSize="28sp"
         android:textStyle="bold"
@@ -54,7 +54,9 @@
         app:layout_constraintBottom_toTopOf="@+id/btn_size_comparison"
         app:layout_constraintEnd_toStartOf="@+id/guideline12"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline11" />
+        app:layout_constraintTop_toTopOf="@+id/guideline11"
+        android:contentDescription="@string/text_content_desc_personal_data_button"
+        />
 
     <Button
         android:id="@+id/btn_size_comparison"
@@ -70,7 +72,9 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline13"
         app:layout_constraintEnd_toEndOf="@+id/btn_personal_data"
         app:layout_constraintStart_toStartOf="@+id/btn_personal_data"
-        app:layout_constraintTop_toBottomOf="@+id/btn_personal_data" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_personal_data"
+        android:contentDescription="@string/text_content_desc_size_comparison_button"
+        />
 
     <Button
         android:id="@+id/btn_weekly_track"
@@ -87,14 +91,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/guideline12"
-        app:layout_constraintTop_toTopOf="@+id/guideline11" />
+        app:layout_constraintTop_toTopOf="@+id/guideline11"
+        android:contentDescription="@string/text_content_desc_weekly_track_button"
+        />
 
     <TextView
         android:id="@+id/btn_text_personal_data"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="Personal Data"
+        android:text="@string/text_personal_data"
         android:textColor="@color/wombWiseBlue"
         android:textSize="13sp"
         android:textStyle="bold"
@@ -107,7 +113,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="Weekly Track"
+        android:text="@string/text_weekly_track"
         android:textColor="@color/wombWiseBlue"
         android:textSize="13sp"
         android:textStyle="bold"
@@ -121,7 +127,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="Baby Size"
+        android:text="@string/text_baby_size"
         android:textColor="@color/wombWiseBlue"
         android:textSize="13sp"
         android:textStyle="bold"
@@ -143,14 +149,16 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline13"
         app:layout_constraintEnd_toEndOf="@+id/btn_weekly_track"
         app:layout_constraintStart_toStartOf="@+id/btn_weekly_track"
-        app:layout_constraintTop_toBottomOf="@+id/btn_weekly_track" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_weekly_track"
+        android:contentDescription="@string/text_content_desc_calculate_due_date"
+        />
 
     <TextView
         android:id="@+id/text_calc_due_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="Calculate Due Date"
+        android:text="@string/text_calculate_due_date"
         android:textColor="@color/wombWiseBlue"
         android:textSize="13sp"
         android:textStyle="bold"

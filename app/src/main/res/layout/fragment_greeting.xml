@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/lilita_one"
-        android:text="WombWise"
+        android:text="@string/text_greeting_title_wombwise"
         android:textColor="#E6857E"
         android:textSize="42sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
@@ -41,7 +41,7 @@
         android:backgroundTint="@color/wombWiseBlue"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:text="Login"
+        android:text="@string/text_btn_login"
         android:textColor="@color/wombWiseBeige"
         android:textSize="20sp"
         app:cornerRadius="@null"
@@ -64,14 +64,15 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline7" />
+        app:layout_constraintTop_toTopOf="@+id/guideline7"
+        android:contentDescription="@string/text_content_desc_wombwise_logo" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Your trusty companion in the journey to motherhood"
+        android:text="@string/text_app_opening_slogan"
         android:textAlignment="center"
         android:textColor="#676767"
         android:textSize="16sp"

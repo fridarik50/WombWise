@@ -9,12 +9,12 @@
     tools:context="fragments.DueDateCalcFragment">
 
     <TextView
-        android:id="@+id/title_main_frag2"
+        android:id="@+id/title_due_date_calc"
         android:layout_width="300dp"
         android:layout_height="75dp"
         android:layout_marginStart="24dp"
-        android:text="Let's Check When Your Little One Is Due"
-        android:textColor="#FF948C"
+        android:text="@string/text_due_date_calc_title"
+        android:textColor="@color/wombWisePink"
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline9"
@@ -28,7 +28,6 @@
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:autofillHints="date"
-        android:editable="true"
         android:focusable="true"
         android:focusableInTouchMode="true"
         android:hint="@string/text_enter_last_menstrual_period_yyyy_mm_dd"
@@ -104,6 +103,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline10" />
+        app:layout_constraintTop_toTopOf="@+id/guideline10"
+        android:contentDescription="@string/image_of_baby_calculating" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
