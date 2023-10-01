@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import com.bumptech.glide.Glide
 import hackeru.fridarik.wombwise.databinding.SizeCompareItemBinding
 import hackeru.fridarik.wombwise.models.BabyGrowthDetails
 
@@ -26,6 +27,9 @@ class BabyGrowthAdapter(val babyGrowthDetails: List <BabyGrowthDetails>): Adapte
         holder.binding.trimesterNumValueSizeItem.text = "${babySize.weekNum}"
         holder.binding.textBabyWeightValue.text = "${babySize.babyWeight}"
         holder.binding.textBabyLengthValue.text = "${babySize.babyLength}"
+        holder.binding.textBabySizeDesc.text = "${babySize.sizeComparison}"
+
+        Glide.with(holder.itemView.context).load(babySize.fruitImg).into(holder.binding.weeklyFruitImg)
     }
 
     class BabyGrowthVH(val binding: SizeCompareItemBinding)

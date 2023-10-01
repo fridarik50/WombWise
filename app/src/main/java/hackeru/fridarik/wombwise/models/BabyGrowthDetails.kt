@@ -18,4 +18,6 @@ data class BabyGrowthDetails(
     val babyWeight: String,
     @SerializedName("baby_length")
     val babyLength: String,
+    @SerializedName("fruit_img")
+    val fruitImg: String
 ) : Parcelable

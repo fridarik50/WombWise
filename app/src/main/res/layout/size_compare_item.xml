@@ -43,7 +43,7 @@
             app:layout_constraintGuide_percent="0.75" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/weekly_fruit_img"
             android:layout_width="200dp"
             android:layout_height="150dp"
             android:layout_marginTop="32dp"
@@ -60,11 +60,13 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="Baby Size:"
-            android:textColor="#6E6E6E"
+            android:textAlignment="center"
+            android:textColor="@color/wombWiseDarkGray"
             android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/guideline6"
-            app:layout_constraintEnd_toEndOf="@+id/imageView2"
-            app:layout_constraintStart_toStartOf="@+id/imageView2" />
+            app:layout_constraintEnd_toEndOf="@+id/weekly_fruit_img"
+            app:layout_constraintStart_toStartOf="@+id/weekly_fruit_img" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline8"
